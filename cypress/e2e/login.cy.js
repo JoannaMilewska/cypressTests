@@ -2,7 +2,7 @@
 
 
 
-describe('login to wejit', () => {
+describe('login to wejit website', () => {
     beforeEach(() => {
       cy.visit('https://wejit-dev.test.jit.ninja/')
     })
