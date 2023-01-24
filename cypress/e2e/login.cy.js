@@ -1,12 +1,10 @@
 /// <reference types="cypress" />
 
-
-
-describe('login to wejit website', () => {
+describe('login to wejit', () => {
     beforeEach(() => {
       cy.visit('https://wejit-dev.test.jit.ninja/')
     })
-    it('login to wejit', () => {
+    it('login to wejitt', () => {
         cy.get('#login-button').click()
     })
   })
