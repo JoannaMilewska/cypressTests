@@ -6,6 +6,7 @@ describe('create an account on luma', () => {
     })
     it('create an account on luma', () => {
        cy.get('.panel > ul > li:nth-child(3) > a').click()
+       
     })
   })
   
