@@ -2,17 +2,16 @@
 import homePage from "../pages/homePage";
 import accountCreationPage from "../pages/accountCreationPage";
 import myAccountPage from "../pages/myAccountPage";
-const firstName = "Joanna";
-const lastName ="Milewska";
+
 
 describe("create an account on luma", () => {
   beforeEach(() => {
-    cy.visit("https://magento.softwaretestingboard.com/");
+    cy.visit('/')
   });
   it("create an account on luma", () => {
+  cy.fixture('data.json').then((user)=>{
   homePage.clickOnCreateAnAccount();
-  accountCreationPage.fillRegisterForm(firstName,lastName);
-  accountCreationPage.confirmRegistration();
-  myAccountPage.validateWelcomeScreen(firstName, lastName);
-  })
+  accountCreationPage.fillRegisterForm(user.firstName,user.lastName,user.password);
+  myAccountPage.validateWelcomeScreen(user.firstName, user.lastName);
+  })})
 });
