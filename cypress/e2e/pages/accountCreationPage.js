@@ -29,4 +29,4 @@
         return title;
     }
 }
-module.exports = new accountCreationPage();
+export default new accountCreationPage();

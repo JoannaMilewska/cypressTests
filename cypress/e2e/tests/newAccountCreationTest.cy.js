@@ -2,6 +2,7 @@
 import homePage from "../pages/homePage";
 import accountCreationPage from "../pages/accountCreationPage";
 import myAccountPage from "../pages/myAccountPage";
+import user from "../../fixtures/data.json"
 
 
 describe("create an account on luma", () => {
@@ -9,9 +10,8 @@ describe("create an account on luma", () => {
     cy.visit('/')
   });
   it("create an account on luma", () => {
-  cy.fixture('data.json').then((user)=>{
-  homePage.clickOnCreateAnAccount();
-  accountCreationPage.fillRegisterForm(user.firstName,user.lastName,user.password);
-  myAccountPage.validateWelcomeScreen(user.firstName, user.lastName);
-  })})
+    homePage.clickOnCreateAnAccount();
+    accountCreationPage.fillRegisterForm(user.firstName, user.lastName, user.password);
+    myAccountPage.elements.welcomeText().should("have.text",`Welcome, ${user.firstName} ${user.lastName}!`);
+  })
 });

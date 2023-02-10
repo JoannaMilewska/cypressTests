@@ -6,4 +6,4 @@ class homePage{
         clickOnCreateAnAccount(){
         this.elements.newAccountBtn().click()
     }}
-    module.exports = new homePage();
+    export default new homePage();
