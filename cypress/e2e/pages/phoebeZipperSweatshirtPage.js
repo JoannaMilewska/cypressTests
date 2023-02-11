@@ -7,6 +7,7 @@ class phoebeZipperSweatshirt {
         productReviewsTabLabel: () => cy.get('#tab-label-reviews-title'),
         productDescriptionContentTab: () => cy.get('#description'),
         productAdditionalContentTab: () => cy.get('#additional'),
+        productImage: () => cy.get('[alt="Phoebe Zipper Sweatshirt"]'),
     }
 
     getProductNameSpan() {
@@ -37,5 +38,8 @@ class phoebeZipperSweatshirt {
         return this.elements.productAdditionalContentTab()
     }
 
+    getproductImage() {
+        return this.elements.productImage()
+    }
 };
 module.exports = new phoebeZipperSweatshirt();
