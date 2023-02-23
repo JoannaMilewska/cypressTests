@@ -1,5 +1,9 @@
 {
     "firstName": "Joanna",
     "lastName": "Milewska",
-    "password": "Password123"
+    "password": "Password123",
+    "demoLogin": "jankowalski@example.com",
+    "demoPassword": "Password1234",
+    "demoName": "Jan",
+    "demoLastName": "Kowalski"
 }
