@@ -19,7 +19,7 @@ And('clicks the "Login" button', () => {
 })
 
 Then('the user should be redirected to main page',()=>{
-    lumaHomePage.elements.mainPhoto();
+    lumaHomePage.elements.mainPhoto().should('be.visible');
 })
 
 Then('the page should display a message confirming that the user has logged in successfully', () => {
@@ -29,5 +29,5 @@ Then('the page should display a message confirming that the user has logged in s
 And('the user should be able to access all the features available to logged-in users', () => {
     lumaHomePage.clickwelcomeTextArrow();
     lumaHomePage.chooseMyAccountFromDropdownMenu();
-    myAccountPage.elements.personalInfo();
+    myAccountPage.elements.personalInfo().should('be.visible');
 })
