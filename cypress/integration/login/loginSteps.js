@@ -22,7 +22,7 @@ Then('the user should be redirected to main page',()=>{
     lumaHomePage.elements.mainPhoto().should('be.visible');
 })
 
-Then('the page should display a message confirming that the user has logged in successfully', () => {
+And('the page should display a message confirming that the user has logged in successfully', () => {
     lumaHomePage.elements.welcomeText().should("have.text",`Welcome, ${user.demoName} ${user.demoLastName}!`);
 })
 
