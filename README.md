@@ -1,18 +1,18 @@
-# cypressTests
+# Open source project based on Cypress
 
-How to install cypress: 
+<b>How to install cypress: </b>
 https://docs.cypress.io/guides/getting-started/installing-cypress
 
-How to run cypress: 
-npx cypress open
+<b>How to run cypress: </b>
+<code>npx cypress open</code>
 
-Website testing: 
+<b>Website testing: </b>
 https://magento.softwaretestingboard.com/
 
-Completed issues: </br>
+<b>Completed issues: </br>
 https://github.com/JoannaMilewska/cypressTests/issues/4 - Cucumber </br>
 https://github.com/JoannaMilewska/cypressTests/issues/5 - Correct Login to Home Page #5 </br>
 
 
-To do issues: 
+<b>To do issues: </b>
 https://github.com/JoannaMilewska/cypressTests/issues
