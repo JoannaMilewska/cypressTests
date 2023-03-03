@@ -1,7 +1,7 @@
 class myAccountPage {
 
     elements = {
-        welcomeText: () => cy.get(".panel.header span.logged-in")
+        personalInfo: () => cy.get('.box-information > .box-content > p')
     }
 }
 export default new myAccountPage();
