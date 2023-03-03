@@ -1,9 +1,9 @@
 import { use } from "chai";
 import { And, Given, Then, When } from "cypress-cucumber-preprocessor/steps";
 import user from "../../fixtures/data.json";
-import loginPage from "../loginPage";
-import lumaHomePage from "../lumaHomePage";
-import myAccountPage from "../myAccountPage";
+import loginPage from "../../e2e/pages/loginPage";
+import lumaHomePage from "../../e2e/pages/lumaHomePage";
+import myAccountPage from "../../e2e/pages/myAccountPage";
 
 Given('the user is on the login page', () => {
     cy.visit('/')
