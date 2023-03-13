@@ -50,5 +50,20 @@ class lumaHomePage {
     this.footer.subsriptionEmailTexbox().type("jankowalski@example.com");
     this.footer.subsriptionButton().click();
   }
+  redirectToWhatsNewTab() {
+    this.topbar.whatsNewButton().click();
+  }
+  redirectToWomenTab() {
+    this.topbar.womenButton().click();
+  }
+  redirectToMenTab() {
+    this.topbar.menButton().click();
+  }
+  redirectToGearTab() {
+    this.topbar.gearButton().click();
+  }
+  redirectToSaleTab() {
+    this.topbar.saleButton().click();
+  }
 }
 export default new lumaHomePage();

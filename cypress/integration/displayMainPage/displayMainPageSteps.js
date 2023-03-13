@@ -38,7 +38,18 @@ And("all images on the page should be correctly displayed", () => {
   lumaHomePage.photos.ecofriendlyPhoto().should("be.visible");
 });
 
-And("all links on the page should be active and redirect to the correct pages", () => {});
+And("all links on the page should be active and redirect to the correct pages", () => {
+  lumaHomePage.redirectToWhatsNewTab();
+  cy.get(".base").should("have.text", "What's New");
+  lumaHomePage.redirectToWomenTab();
+  cy.get(".base").should("have.text", "Women");
+  //lumaHomePage.redirectToMenTab();
+  //cy.get(".base").should("have.text", "Men");
+  lumaHomePage.redirectToGearTab();
+  cy.get(".base").should("have.text", "Gear");
+  lumaHomePage.redirectToSaleTab();
+  cy.get(".base").should("have.text", "Sale");
+});
 
 And("page footer should be correctly displayed", () => {
   lumaHomePage.footer.aboutUs().should("be.visible");
@@ -47,6 +58,7 @@ And("page footer should be correctly displayed", () => {
   lumaHomePage.footer.privacy().should("be.visible");
   lumaHomePage.footer.advancedSearch().should("be.visible");
   lumaHomePage.footer.contact().should("be.visible");
+  lumaHomePage.footer.copyright().should("be.visible");
 });
 
 And("subsription option should be functional", () => {
