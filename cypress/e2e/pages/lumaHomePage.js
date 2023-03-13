@@ -6,6 +6,7 @@ class lumaHomePage {
     welcomeTextArrow: () => cy.get(".panel.header>.header.links>.customer-welcome button"),
     myAccountDropdownMenu: () => cy.contains("My Account"),
     logo: () => cy.get(".logo"),
+    subsriptionConfirmed: () => cy.contains("This email address is already subscribed."),
   };
   topbar = {
     whatsNewButton: () => cy.contains("What's New"),
@@ -24,14 +25,12 @@ class lumaHomePage {
     ecofriendlyPhoto: () => cy.get("a.block-promo.home-eco"),
   };
   footer = {
-    moreWebsites: () => cy.contains("More websites for practice"),
     aboutUs: () => cy.contains("About us"),
     customerService: () => cy.contains("Customer Service"),
-    askQuestion: () => cy.contains("Ask a question"),
-    writeForUs: () => cy.contains("Write for Us"),
     searchTerms: () => cy.contains("Search Terms"),
     privacy: () => cy.contains("Privacy and Cookie Policy"),
     advancedSearch: () => cy.get(".footer.content > :nth-child(3) > :nth-child(3) > a"),
+    contact: () => cy.contains("Contact Us"),
     ordersAndReturns: () => cy.contains("Orders and Returns"),
     subsriptionButton: () => cy.get(".action.subscribe.primary"),
     subsriptionEmailTexbox: () => cy.get("#newsletter"),
@@ -46,6 +45,10 @@ class lumaHomePage {
   }
   chooseMyAccountFromDropdownMenu() {
     this.elements.myAccountDropdownMenu().click();
+  }
+  signUpForSubsription() {
+    this.footer.subsriptionEmailTexbox().type("jankowalski@example.com");
+    this.footer.subsriptionButton().click();
   }
 }
 export default new lumaHomePage();

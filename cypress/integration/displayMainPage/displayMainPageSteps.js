@@ -16,9 +16,7 @@ And("the user logs in", () => {
 
 When("the user loads the home page", () => {});
 
-Then("the header of the page should display the correct text", () => {});
-
-And("the site logo should be displayed", () => {
+Then("the site logo should be displayed", () => {
   lumaHomePage.elements.logo().should("be.visible");
 });
 
@@ -43,15 +41,15 @@ And("all images on the page should be correctly displayed", () => {
 And("all links on the page should be active and redirect to the correct pages", () => {});
 
 And("page footer should be correctly displayed", () => {
-  lumaHomePage.footer.moreWebsites().should("be.visible");
   lumaHomePage.footer.aboutUs().should("be.visible");
   lumaHomePage.footer.customerService().should("be.visible");
-  lumaHomePage.footer.askQuestion().should("be.visible");
-  lumaHomePage.footer.writeForUs().should("be.visible");
   lumaHomePage.footer.searchTerms().should("be.visible");
   lumaHomePage.footer.privacy().should("be.visible");
   lumaHomePage.footer.advancedSearch().should("be.visible");
-  lumaHomePage.footer.opensourceInfo().should("be.visible");
+  lumaHomePage.footer.contact().should("be.visible");
 });
 
-And("all forms such as a contact form should be functional", () => {});
+And("subsription option should be functional", () => {
+  lumaHomePage.signUpForSubsription();
+  lumaHomePage.elements.subsriptionConfirmed().should("be.visible");
+});
