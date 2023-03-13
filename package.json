@@ -8,9 +8,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^12.5.1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoannaMilewska/cypressTests.git"
@@ -22,6 +19,7 @@
   "description": "",
   "devDependencies": {
     "cucumber": "^6.0.7",
+    "cypress": "^12.7.0",
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "cypress-cucumber-preprocessor": {
