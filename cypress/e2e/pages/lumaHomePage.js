@@ -11,10 +11,11 @@ class lumaHomePage {
   topbar = {
     whatsNewButton: () => cy.contains("What's New"),
     womenButton: () => cy.contains("Women"),
-    menButton: () => cy.contains("Men"),
+    menButton: () => cy.contains("span", "Men"),
     gearButton: () => cy.contains("Gear"),
     trainingButton: () => cy.contains("Training"),
     saleButton: () => cy.contains("Sale"),
+    header: () => cy.get(".base"),
   };
   photos = {
     mainPhoto: () => cy.get(".blocks-promo > a"),
@@ -57,7 +58,8 @@ class lumaHomePage {
     this.topbar.womenButton().click();
   }
   redirectToMenTab() {
-    this.topbar.menButton().click();
+    cy.pause();
+    this.topbar.menButton().click({ force: true });
   }
   redirectToGearTab() {
     this.topbar.gearButton().click();

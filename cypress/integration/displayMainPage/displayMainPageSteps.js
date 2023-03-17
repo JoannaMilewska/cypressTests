@@ -40,15 +40,15 @@ And("all images on the page should be correctly displayed", () => {
 
 And("all links on the page should be active and redirect to the correct pages", () => {
   lumaHomePage.redirectToWhatsNewTab();
-  cy.get(".base").should("have.text", "What's New");
+  lumaHomePage.topbar.header().should("have.text", "What's New");
   lumaHomePage.redirectToWomenTab();
-  cy.get(".base").should("have.text", "Women");
-  //lumaHomePage.redirectToMenTab();
-  //cy.get(".base").should("have.text", "Men");
+  lumaHomePage.topbar.header().should("have.text", "Women");
+  lumaHomePage.redirectToMenTab();
+  lumaHomePage.topbar.header().should("have.text", "Men");
   lumaHomePage.redirectToGearTab();
-  cy.get(".base").should("have.text", "Gear");
+  lumaHomePage.topbar.header().should("have.text", "Gear");
   lumaHomePage.redirectToSaleTab();
-  cy.get(".base").should("have.text", "Sale");
+  lumaHomePage.topbar.header().should("have.text", "Sale");
 });
 
 And("page footer should be correctly displayed", () => {
