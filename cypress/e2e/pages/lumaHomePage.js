@@ -7,6 +7,8 @@ class lumaHomePage {
     myAccountDropdownMenu: () => cy.contains("My Account"),
     logo: () => cy.get(".logo"),
     subsriptionConfirmed: () => cy.contains("This email address is already subscribed."),
+    bag: () => cy.contains("Push It Messenger Bag"),
+    cartLogo: () => cy.get(".action.showcart"),
   };
   topbar = {
     whatsNewButton: () => cy.contains("What's New"),
@@ -67,5 +69,12 @@ class lumaHomePage {
   redirectToSaleTab() {
     this.topbar.saleButton().click();
   }
+  choosingBag() {
+    this.elements.bag().click();
+  }
+  redirectToCart() {
+    this.elements.cartLogo().click();
+  }
 }
+
 export default new lumaHomePage();
