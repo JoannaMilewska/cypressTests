@@ -4,6 +4,7 @@ import loginPage from "../../e2e/pages/loginPage";
 import lumaHomePage from "../../e2e/pages/lumaHomePage";
 import myAccountPage from "../../e2e/pages/myAccountPage";
 import productPage from "../../e2e/pages/productPage";
+import shippingDataPage from "../../e2e/pages/shippingDataPage";
 
 Given("the user is on the home page of Luma", () => {
   cy.visit("/");
@@ -25,14 +26,22 @@ And("clicks the cart icon to view the contents of the cart", () => {
 });
 
 And('clicks the "Proceed to Checkout" button', () => {
-  productPage.proceedToCheckout();
+  lumaHomePage.proceedToCheckout();
+  cy.wait(300);
 });
 Then(
   "the billing and shipping information should be displayed correctly and can be edited if necessary",
-  () => {}
+  () => {
+    cy.wait(300);
+    shippingDataPage.fillShippingForm();
+  }
 );
-Then("the user selects a shipping method", () => {});
-Then("the user goes to the next page and selects a payment method", () => {});
+Then("the user selects a shipping method", () => {
+  shippingDataPage.choosingShippingMethod();
+});
+Then("the user goes to the next page and selects a payment method", () => {
+  shippingDataPage.goingToTheNextPage();
+});
 And("the order total should be correctly calculated and displayed", () => {});
 Then('the user clicks the "Place Order" button', () => {});
 And("an order confirmation page should be displayed", () => {});

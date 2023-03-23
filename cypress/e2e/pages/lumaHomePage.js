@@ -9,6 +9,7 @@ class lumaHomePage {
     subsriptionConfirmed: () => cy.contains("This email address is already subscribed."),
     bag: () => cy.contains("Push It Messenger Bag"),
     cartLogo: () => cy.get(".action.showcart"),
+    proceedToCheckoutButton: () => cy.get("#top-cart-btn-checkout"),
   };
   topbar = {
     whatsNewButton: () => cy.contains("What's New"),
@@ -74,6 +75,9 @@ class lumaHomePage {
   }
   redirectToCart() {
     this.elements.cartLogo().click();
+  }
+  proceedToCheckout() {
+    this.elements.proceedToCheckoutButton().click({ force: true });
   }
 }
 
