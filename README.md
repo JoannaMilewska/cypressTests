@@ -12,7 +12,7 @@ https://magento.softwaretestingboard.com/
 <b>Completed issues: </br>
 https://github.com/JoannaMilewska/cypressTests/issues/4 - Cucumber </br>
 https://github.com/JoannaMilewska/cypressTests/issues/5 - Correct Login to Home Page #5 </br>
-
+https://github.com/JoannaMilewska/cypressTests/issues/6 - Correct Display of Home Page </br>
 
 <b>To do issues: </b>
 https://github.com/JoannaMilewska/cypressTests/issues
