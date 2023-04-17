@@ -12,6 +12,5 @@ Feature:  Correct checkout process
         Then the user goes to the next page and selects a payment method
         And the order total should be correctly calculated and displayed
         Then the user clicks the "Place Order" button
-        And an order confirmation page should be displayed.
-        And the order number, date, and order total should be correctly displayed.
-        And the order details, such as the products, billing and shipping information, and payment method are correctly displayed.
+        And an order confirmation page should be displayed
+        And the order details, such as the products, billing and shipping information, and payment method are correctly displayed

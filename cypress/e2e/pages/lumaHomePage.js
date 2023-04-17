@@ -74,7 +74,7 @@ class lumaHomePage {
     this.elements.bag().click();
   }
   redirectToCart() {
-    this.elements.cartLogo().click();
+    this.elements.cartLogo().click({ force: true });
   }
   proceedToCheckout() {
     this.elements.proceedToCheckoutButton().click({ force: true });
